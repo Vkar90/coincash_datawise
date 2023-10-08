@@ -1,7 +1,32 @@
 @import "./colors.scss";
 @import "./_typography.scss";
 @import "./reset.scss";
+@import "./buttons.scss";
+@import "./textbox.scss";
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 144rem;
+  flex-direction: column;
+  margin: 0 auto;
+}
 
 h1 {
   @include header-1;
+}
+
+.desktop-button {
+  @include desktop-button-cta;
+  @include label-1;
+}
+
+.mobile-button {
+  @include mobile-button-cta;
+  @include mobile-label-1;
+}
+
+.textBox {
+  @include textbox;
 }

@@ -1,0 +1,18 @@
+@import "./_colors.scss";
+@import "./_typography.scss";
+
+@mixin textbox {
+  width: 40rem;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  align-items: center;
+  gap: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: $white;
+  box-shadow: $elevation;
+
+  &::placeholder {
+    color: $gray;
+    @include body-2;
+  }
+}

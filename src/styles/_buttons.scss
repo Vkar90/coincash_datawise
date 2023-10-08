@@ -1,0 +1,40 @@
+@mixin desktop-button-cta {
+  padding: 1.2rem 2.4rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: $primary;
+  color: $white;
+  @include label-1;
+
+  &:hover {
+    background-color: $dark-primary;
+    transition: ease-in-out 0.3s;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    color: $white;
+  }
+}
+
+@mixin mobile-button-cta {
+  padding: 1.2rem 2.4rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-primary;
+    transition: ease-in-out 0.3s;
+  }
+
+  &:disabled {
+    background-color: $gray;
+    color: $white;
+  }
+}
