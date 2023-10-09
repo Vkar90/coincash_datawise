@@ -1,10 +1,12 @@
 import "../styles/main.scss";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
+import BlueSection from "../components/BlueSection";
 
 function App() {
   return (
     <main>
-      <Header />
+      <Hero />
+      <BlueSection />
     </main>
   );
 }

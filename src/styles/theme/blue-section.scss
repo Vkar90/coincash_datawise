@@ -1,0 +1,18 @@
+.blue-section {
+  width: 100%;
+  background-color: $primary;
+
+  .blue-section-container {
+    width: 100%;
+    max-width: 56rem;
+    margin: 0 auto;
+    display: flex;
+    padding: 2.4rem 0;
+    text-align: center;
+
+    .blue-section-text {
+      @include body-1;
+      color: $white;
+    }
+  }
+}

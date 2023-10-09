@@ -1,0 +1,15 @@
+$primary: #0066ff;
+$light-primary: #84b5ff;
+$dark-primary: #0147ae;
+$white: #ffffff;
+$black: #1c1b1f;
+$gray: #a3a6aa;
+$light-gradient: linear-gradient(
+    0deg,
+    rgba(0, 102, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+  ),
+  #ffffff;
+$dark-gradient: linear-gradient(180deg, #020d1f 0%, #06f 163.62%);
+
+$elevation: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

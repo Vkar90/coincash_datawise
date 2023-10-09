@@ -1,11 +1,11 @@
-@import "./_colors.scss";
-@import "./_typography.scss";
-@import "./_buttons.scss";
+@import "./theme/_colors.scss";
+@import "./theme/_typography.scss";
+@import "./theme/_buttons.scss";
 
 .main-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 16.4rem;
   align-self: stretch;
   margin-top: 4.4rem;

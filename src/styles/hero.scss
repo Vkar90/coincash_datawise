@@ -1,0 +1,69 @@
+// hero.scss
+@import "./theme/_colors.scss";
+@import "./theme/_typography.scss";
+@import "./theme/_buttons.scss";
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80rem;
+  width: 100%;
+  background: $light-gradient;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 111rem;
+    margin: 0 auto;
+    gap: 16.4rem;
+
+    .hero-content-container {
+      display: flex;
+      flex-direction: row;
+
+      .hero-cta-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3.6rem;
+        flex-shrink: 0;
+
+        .hero-text-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 54.2rem;
+          gap: 1.6rem;
+          align-self: stretch;
+
+          .hero-cta {
+            color: $black;
+            @include header-1;
+
+            .brand-name {
+              color: $primary;
+              @include header-1;
+            }
+          }
+          .hero-cta-description {
+            @include body-2;
+          }
+        }
+        .hero-button {
+          @include desktop-button-cta;
+        }
+      }
+      .hero-img {
+        position: absolute;
+        right: 0.1rem;
+        bottom: 0rem;
+      }
+    }
+  }
+}
