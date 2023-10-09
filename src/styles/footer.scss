@@ -1,6 +1,5 @@
 footer {
   display: flex;
-  padding: 10rem 16.4rem 2.4rem 16.4rem;
   flex-direction: column;
   align-items: center;
   gap: 13.6rem;
@@ -8,9 +7,13 @@ footer {
   background: $dark-gradient;
 
   .footer-container {
+    width: 100%;
+    max-width: 111.1rem;
+
     .footer-bottom {
       display: flex;
       flex-direction: row;
+      margin-bottom: 2.4rem;
 
       .logo-container {
         display: flex;

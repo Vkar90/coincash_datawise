@@ -1,10 +1,12 @@
 .main-section {
   display: flex;
-  padding: 10rem 16.4rem;
   flex-direction: column;
   align-items: center;
+  max-width: 111.1rem;
+  width: 100%;
   gap: 13.6rem;
-  align-self: stretch;
+  margin: 0 auto;
+  padding: 10rem 0;
 
   .heading-container {
     display: flex;
@@ -12,20 +14,15 @@
     justify-content: center;
     align-items: center;
     gap: 1.6rem;
-    align-self: stretch;
 
     .section-heading {
       @include header-1;
+      text-align: center;
     }
 
     .section-subheading {
       @include body-2;
+      text-align: center;
     }
-  }
-  .icon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }

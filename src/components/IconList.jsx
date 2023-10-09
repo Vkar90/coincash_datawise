@@ -8,19 +8,20 @@ const IconList = () => {
       <div className="icon-item">
         <img src={airplaneTicket} alt="icon" className="icon-image" />
         <p className="icon-description">
-          You can <span className="blue-color">book</span> tickets
+          You can <br></br>
+          <span className="blue-color">book</span> tickets
         </p>
       </div>
       <div className="icon-item">
         <img src={cart} alt="icon" className="icon-image" />
         <p className="icon-description">
-          You can <span className="blue-color">buy</span> groceries
+          You can <br></br> <span className="blue-color">buy</span> groceries
         </p>
       </div>
       <div className="icon-item">
         <img src={page} alt="icon" className="icon-image" />
         <p className="icon-description">
-          You can <span className="blue-color">pay</span> your bills
+          You can <br></br> <span className="blue-color">pay</span> your bills
         </p>
       </div>
     </div>

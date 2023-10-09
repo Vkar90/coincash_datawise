@@ -10,9 +10,7 @@ const MainSection = () => {
           The easiest way to use your cryptocurrencies for everyday purchases.
         </h3>
       </div>
-      <div className="icon-container">
-        <IconList />
-      </div>
+      <IconList />
       <ImageWithText imageFirst={true} />
       <ImageWithText imageFirst={false} />
     </div>

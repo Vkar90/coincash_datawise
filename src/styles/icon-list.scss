@@ -1,7 +1,9 @@
 .icon-row {
   display: flex;
   flex-direction: row;
-  gap: 30rem;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 111.1rem;
 
   .icon-item {
     display: flex;
