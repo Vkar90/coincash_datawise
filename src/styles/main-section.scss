@@ -1,0 +1,31 @@
+.main-section {
+  display: flex;
+  padding: 10rem 16.4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 13.6rem;
+  align-self: stretch;
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    align-self: stretch;
+
+    .section-heading {
+      @include header-1;
+    }
+
+    .section-subheading {
+      @include body-2;
+    }
+  }
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

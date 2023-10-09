@@ -1,0 +1,45 @@
+.email-form-container {
+  width: 100%;
+  max-width: 40rem;
+  background-color: $white;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  box-shadow: $elevation;
+
+  .input-button-container {
+    display: flex;
+    overflow: hidden;
+    margin: 13.6rem 0;
+
+    .input-container {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      .email-form-input {
+        flex-grow: 1;
+        border: none;
+        padding: 2rem;
+        border-radius: 0;
+        @include textbox;
+        @include body-2;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .button-container {
+      .email-submit-button {
+        border: none;
+        margin: 0.8rem;
+        padding: 0.8rem 1.2rem;
+        background-color: transparent;
+        cursor: pointer;
+        @include desktop-button-cta;
+        @include label-1;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.newsletter-container {
+  width: 100%;
+  max-width: 111rem;
+
+  .newsletter-headings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    align-self: stretch;
+
+    .newsletter-title {
+      @include header-1;
+      color: $white;
+
+      .dark-blue {
+        @include header-1;
+        color: $primary;
+      }
+    }
+
+    .newsletter-subtitle {
+      @include body-2;
+      color: $white;
+      text-align: center;
+    }
+  }
+}

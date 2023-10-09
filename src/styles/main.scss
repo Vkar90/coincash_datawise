@@ -1,6 +1,15 @@
+//theme elements
 @import "./theme/_colors.scss";
 @import "./theme/_typography.scss";
 @import "./reset.scss";
 @import "./theme/_buttons.scss";
 @import "./theme/_textbox.scss";
-@import "./theme/blue-section.scss";
+
+// components
+@import "./blue-section.scss";
+@import "./main-section.scss";
+@import "./icon-list.scss";
+@import "./image-with-text.scss";
+@import "./footer.scss";
+@import "./newsletter.scss";
+@import "./email-form.scss";

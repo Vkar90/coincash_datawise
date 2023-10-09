@@ -1,0 +1,25 @@
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30rem;
+
+  .icon-item {
+    display: flex;
+    width: 100%;
+    max-width: 17.1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.6rem;
+    flex: 1 0 0;
+
+    .icon-description {
+      @include body-1;
+      text-align: center;
+
+      .blue-color {
+        @include body-1;
+        color: $primary;
+      }
+    }
+  }
+}
