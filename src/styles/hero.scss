@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 80rem;
+  // height: 80rem;
   width: 100%;
   background: $light-gradient;
 
@@ -19,11 +19,11 @@
     width: 100%;
     max-width: 111rem;
     margin: 0 auto;
-    gap: 16.4rem;
 
     .hero-content-container {
       display: flex;
       flex-direction: row;
+      gap: 4.6rem;
 
       .hero-cta-container {
         display: flex;
@@ -60,9 +60,10 @@
         }
       }
       .hero-img {
-        position: absolute;
-        right: -0.1rem;
-        bottom: -0.3rem;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 13.3rem;
+        z-index: 1;
       }
     }
   }

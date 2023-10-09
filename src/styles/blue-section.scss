@@ -1,6 +1,8 @@
 .blue-section {
   width: 100%;
   background-color: $primary;
+  position: relative;
+  z-index: 99;
 
   .blue-section-container {
     width: 100%;
