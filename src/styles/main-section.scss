@@ -38,4 +38,13 @@
       }
     }
   }
+  .main-section__image-container {
+    gap: 13rem;
+    display: flex;
+    flex-direction: column;
+
+    @include small {
+      gap: 4.8rem;
+    }
+  }
 }
