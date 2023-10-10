@@ -5,3 +5,5 @@
 3. active states are not given on the design but are implemented, crosscheck with the design team on this.
 
 4. on textbox components mobile label and text sizes are not given. I have used the mobile equivalents but crosscheck with the design team on this.
+
+5. there is only mobile breakpoint provided in the design. the implementation takes care of other breakpoints (laptop, tablet). discuss with the design team on this.

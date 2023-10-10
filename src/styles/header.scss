@@ -31,6 +31,11 @@
     .logo {
       width: 17.5006rem;
       height: 2.3264rem;
+
+      @include xsmall {
+        width: 13.5407rem;
+        height: 1.8rem;
+      }
     }
   }
 

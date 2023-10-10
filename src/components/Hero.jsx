@@ -75,7 +75,8 @@ const Hero = () => {
           <div className="hero-cta-container">
             <div className="hero-text-container">
               <h1 className="hero-cta">
-                You can buy anything with{" "}
+                You can buy anything {windowWidth <= 500 && <br />} with
+                {"\u00A0"}
                 {text.split("").map((letter, index) => (
                   <span
                     key={index}
