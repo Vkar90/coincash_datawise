@@ -10,7 +10,12 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: 80rem;
   background: $light-gradient;
+
+  @include medium {
+    height: auto;
+  }
 
   .hero-container {
     display: flex;
