@@ -96,6 +96,10 @@
 
           .hero-button {
             @include desktop-button-cta;
+
+            @include small {
+              @include mobile-button-cta;
+            }
           }
         }
       }

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../styles/hero.scss";
 import iphone from "../assets/iphone.svg";
