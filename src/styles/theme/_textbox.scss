@@ -8,8 +8,16 @@
   border-radius: 0.8rem;
   background-color: $white;
 
+  @include small {
+    @include mobile-body-2;
+  }
+
   &::placeholder {
     color: $gray;
     @include body-2;
+
+    @include small {
+      @include mobile-body-2;
+    }
   }
 }

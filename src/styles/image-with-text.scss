@@ -8,6 +8,7 @@
   @include small {
     gap: 2.4rem;
     flex-direction: column;
+    align-items: flex-start;
     padding: 0;
   }
 

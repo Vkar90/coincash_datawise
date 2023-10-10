@@ -16,6 +16,7 @@
   }
 }
 
+// mixin to protect the content on smaller screens before reaching the breakpoints
 @mixin medium-padding {
   @media (max-width: 1150px) {
     padding: 0 2.4rem;

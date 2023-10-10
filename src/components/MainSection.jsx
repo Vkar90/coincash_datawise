@@ -31,14 +31,14 @@ const MainSection = () => {
       </div>
       <IconList />
       <ImageWithText
-        imageFirst={windowWidth <= 500 ? true : true}
+        imageFirst={windowWidth <= 900 ? true : true}
         imageSrc={imageLeft}
         title="Shop anywhere"
         subtitle="The easiest way to use your
       cryptocurrencies for everyday purchases."
       />
       <ImageWithText
-        imageFirst={windowWidth <= 500 ? true : false}
+        imageFirst={windowWidth <= 900 ? true : false}
         imageSrc={imageRight}
         title="Zero fees"
         subtitle="Enjoy zero fees on all purchases."

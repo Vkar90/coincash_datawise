@@ -10,13 +10,26 @@
     align-self: stretch;
     margin-top: 10rem;
 
+    @include small {
+      margin-top: 4.8rem;
+    }
+
     .newsletter-title {
       @include header-1;
       color: $white;
+      text-align: center;
+
+      @include small {
+        @include mobile-header-1;
+      }
 
       .dark-blue {
         @include header-1;
         color: $primary;
+
+        @include small {
+          @include mobile-header-1;
+        }
       }
     }
 
@@ -24,6 +37,10 @@
       @include body-2;
       color: $white;
       text-align: center;
+
+      @include small {
+        @include mobile-body-2;
+      }
     }
   }
 }
