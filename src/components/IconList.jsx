@@ -1,31 +1,17 @@
-import airplaneTicket from "../assets/Airplane Ticket.svg";
-import cart from "../assets/Cart.svg";
-import page from "../assets/Page.svg";
-
-const IconList = () => {
+import PropTypes from "prop-types";
+import IconItem from "./IconItem";
+const IconList = ({ items }) => {
   return (
     <div className="icon-row">
-      <div className="icon-item">
-        <img src={airplaneTicket} alt="icon" className="icon-image" />
-        <p className="icon-description">
-          You can <br></br>
-          <span className="blue-color">book</span> tickets
-        </p>
-      </div>
-      <div className="icon-item">
-        <img src={cart} alt="icon" className="icon-image" />
-        <p className="icon-description">
-          You can <br></br> <span className="blue-color">buy</span> groceries
-        </p>
-      </div>
-      <div className="icon-item">
-        <img src={page} alt="icon" className="icon-image" />
-        <p className="icon-description">
-          You can <br></br> <span className="blue-color">pay</span> your bills
-        </p>
-      </div>
+      {items.map((item, index) => (
+        <IconItem key={index} {...item} />
+      ))}
     </div>
   );
+};
+
+IconList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default IconList;

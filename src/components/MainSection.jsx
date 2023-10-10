@@ -2,8 +2,29 @@ import { useEffect, useState } from "react";
 import IconList from "./IconList";
 import ImageWithText from "./ImageWithText";
 
+import airplaneTicket from "../assets/Airplane Ticket.svg";
+import cart from "../assets/Cart.svg";
+import page from "../assets/Page.svg";
 import imageLeft from "../assets/image_left.jpg";
 import imageRight from "../assets/image_right.jpg";
+
+const iconItems = [
+  {
+    iconSrc: airplaneTicket,
+    description: { beforeHighlight: "You can", afterHighlight: "tickets" },
+    highlight: "book",
+  },
+  {
+    iconSrc: cart,
+    description: { beforeHighlight: "You can", afterHighlight: "groceries" },
+    highlight: "buy",
+  },
+  {
+    iconSrc: page,
+    description: { beforeHighlight: "You can", afterHighlight: "your bills" },
+    highlight: "pay",
+  },
+];
 
 const MainSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,7 +50,7 @@ const MainSection = () => {
           The easiest way to use your cryptocurrencies for everyday purchases.
         </h3>
       </div>
-      <IconList />
+      <IconList items={iconItems} />
       <ImageWithText
         imageFirst={windowWidth <= 900 ? true : true}
         imageSrc={imageLeft}
