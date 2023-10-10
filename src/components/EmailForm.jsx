@@ -18,9 +18,16 @@ const EmailForm = () => {
   };
 
   return (
-    <form className="email-form-container" onSubmit={handleSubmit}>
+    <form
+      className="email-form-container"
+      onSubmit={handleSubmit}
+      aria-label="Email Subscription Form"
+    >
       <div className="input-button-container">
         <div className="input-container">
+          <label htmlFor="email-input" className="visually-hidden hidden">
+            Email Address:
+          </label>
           <input
             type="email"
             name="email"
@@ -29,6 +36,7 @@ const EmailForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            aria-required="true"
           />
         </div>
         <div className="button-container">

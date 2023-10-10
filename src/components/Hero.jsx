@@ -62,7 +62,12 @@ const Hero = () => {
   }, [inView]);
 
   return (
-    <section className="hero" ref={ref}>
+    <section
+      className="hero"
+      ref={ref}
+      aria-labelledby="hero-heading"
+      role="region"
+    >
       <div className="hero-container">
         <Header />
         <div className="hero-content-container">
@@ -89,11 +94,13 @@ const Hero = () => {
               </h2>
             </div>
             <div className="hero-button-container">
-              <button className="hero-button">{buttonText}</button>
+              <button className="hero-button" aria-label={buttonText}>
+                {buttonText}
+              </button>
             </div>
           </div>
           <div className="hero-img">
-            <img src={heroImage} alt="coincash feature image" />
+            <img src={heroImage} alt="Feature demonstration of CoinCash" />
           </div>
         </div>
       </div>

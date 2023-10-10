@@ -30,6 +30,8 @@ const MobileMenu = ({ isMenuOpen, toggleMenu }) => {
       exit="closed"
       variants={menuVariants}
       transition={{ duration: 0.5 }}
+      aria-label="Mobile navigation menu"
+      role="navigation"
     >
       <motion.ul variants={ulVariants} className="mobile-menu-list">
         <motion.li variants={listItemVariants} className="mobile-menu-item">

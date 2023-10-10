@@ -9,25 +9,38 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="main-header">
+    <header className="main-header" role="banner" aria-label="Main Header">
       <div className="logo-container">
-        <img src={mainLogo} alt="logo" className="logo" />
+        <img src={mainLogo} alt="coincash logo" className="logo" />
       </div>
-      <div className="menu-container desktop-menu">
-        <ul className="menu">
-          <li className="menu-item">Features</li>
-          <li className="menu-item">About</li>
-          <li className="menu-item">Contact</li>
+      <div
+        className="menu-container desktop-menu"
+        aria-label="Desktop Navigation Menu"
+      >
+        <ul className="menu" role="menu">
+          <li className="menu-item" role="menuitem">
+            Features
+          </li>
+          <li className="menu-item" role="menuitem">
+            About
+          </li>
+          <li className="menu-item" role="menuitem">
+            Contact
+          </li>
         </ul>
         <div className="cta">
-          <button className="header-cta">Get the app</button>
+          <button className="header-cta" role="link" aria-label="Get the App">
+            Get the app
+          </button>
         </div>
       </div>
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className="mobile-menu-button"
+        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+        aria-expanded={isMenuOpen}
       >
-        <img src={burger} alt="mobile menu" />
+        <img src={burger} alt="mobile menu icon" />
       </button>
       <AnimatePresence mode="wait">
         {isMenuOpen && (

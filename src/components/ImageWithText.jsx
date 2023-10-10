@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const ImageWithText = ({ imageFirst, imageSrc, title, subtitle }) => {
+const ImageWithText = ({ imageFirst, imageSrc, title, subtitle, altText }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -22,7 +22,7 @@ const ImageWithText = ({ imageFirst, imageSrc, title, subtitle }) => {
     <div className="image-with-text-container">
       {imageFirst ? (
         <>
-          <img src={imageSrc} alt="image" className="image-with-text-image" />
+          <img src={imageSrc} alt={altText} className="image-with-text-image" />
           <div className="text-container" ref={ref}>
             <motion.h3
               className="image-with-text-title"
@@ -48,7 +48,7 @@ const ImageWithText = ({ imageFirst, imageSrc, title, subtitle }) => {
             </motion.h3>
             <p className="image-with-text-subtitle">{subtitle}</p>
           </div>
-          <img src={imageSrc} alt="image" className="image-with-text-image" />
+          <img src={imageSrc} alt={altText} className="image-with-text-image" />
         </>
       )}
     </div>
@@ -60,6 +60,7 @@ ImageWithText.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
 };
 
 export default ImageWithText;

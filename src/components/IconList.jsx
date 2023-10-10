@@ -2,9 +2,11 @@ import PropTypes from "prop-types";
 import IconItem from "./IconItem";
 const IconList = ({ items }) => {
   return (
-    <div className="icon-row">
+    <div className="icon-row" role="list">
       {items.map((item, index) => (
-        <IconItem key={index} {...item} />
+        <div role="listitem" key={index}>
+          <IconItem {...item} />
+        </div>
       ))}
     </div>
   );
