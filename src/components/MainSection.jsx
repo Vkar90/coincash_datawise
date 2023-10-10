@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import IconList from "./IconList";
 import ImageWithText from "./ImageWithText";
 
@@ -29,44 +30,26 @@ const iconItems = [
 
 const MainSection = () => {
   const controls = useAnimation();
-  const [scrollY, setScrollY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    controls.start({ opacity: 1, transition: { duration: 0.5 } });
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
-
-  useEffect(() => {
-    if (scrollY > 200) {
-      // Change the 200 to whatever scroll position you want to trigger the animation
+    if (inView) {
       controls.start({ y: 0, opacity: 1, transition: { duration: 1 } });
-    } else {
-      controls.start({ y: 100, opacity: 0, transition: { duration: 1 } });
     }
-  }, [scrollY, controls]);
+  }, [controls, inView]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="main-section">
@@ -78,9 +61,10 @@ const MainSection = () => {
       </div>
       <IconList items={iconItems} />
       <motion.div
+        ref={ref}
         initial={{ y: 100, opacity: 0, duration: 0.5 }}
         animate={controls}
-        className="main-section__image-container"
+        className="main-section-image-container"
       >
         <ImageWithText
           imageFirst={windowWidth <= 900 ? true : true}
