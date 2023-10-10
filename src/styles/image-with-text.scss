@@ -5,6 +5,12 @@
   gap: 10rem;
   @include medium-padding;
 
+  @include small {
+    gap: 2.4rem;
+    flex-direction: column;
+    padding: 0;
+  }
+
   .image-with-text-image {
     width: 100%;
     max-width: 54rem;
@@ -20,9 +26,17 @@
 
     .image-with-text-title {
       @include header-2;
+
+      @include small {
+        @include mobile-header-2;
+      }
     }
     .image-with-text-subtitle {
       @include body-2;
+
+      @include small {
+        @include mobile-body-2;
+      }
     }
   }
 }

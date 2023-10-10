@@ -18,6 +18,7 @@
 
       @include xsmall {
         padding: 2.4rem;
+        @include mobile-body-1;
       }
     }
   }

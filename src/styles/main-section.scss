@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding: 10rem 0;
 
-  @include xsmall {
+  @include small {
     gap: 4.8rem;
     padding: 4.8rem 2.4rem;
   }
@@ -24,7 +24,7 @@
       @include header-1;
       text-align: center;
 
-      @include xsmall {
+      @include small {
         @include mobile-header-1;
       }
     }
@@ -33,7 +33,7 @@
       @include body-2;
       text-align: center;
 
-      @include xsmall {
+      @include small {
         @include mobile-body-2;
       }
     }
