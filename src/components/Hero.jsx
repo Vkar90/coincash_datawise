@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 import "../styles/hero.scss";
 import iphone from "../assets/iphone.svg";
 import mobileIphone from "../assets/mobile_hero_image.svg";
+
 import Header from "./Header";
 
 const Hero = () => {
+  const slideUpFadeIn = {
+    hidden: { opacity: 0, y: "100vh" },
+    visible: { opacity: 1, y: 0 },
+  };
+
   // state to hold the button text, hero image and window width
   const [buttonText, setButtonText] = useState("Download now for free");
   const [heroImage, setHeroImage] = useState(iphone);
@@ -46,7 +52,14 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-img">
-            <img src={heroImage} alt="Describe your image" />
+            <motion.img
+              src={heroImage}
+              alt="coincash feature image"
+              initial="hidden"
+              animate="visible"
+              variants={slideUpFadeIn}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            />
           </div>
         </div>
       </div>

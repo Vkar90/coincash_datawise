@@ -2,14 +2,11 @@ import { useState } from "react";
 import mainLogo from "../assets/logo_main.svg";
 import burger from "../assets/menu.svg";
 import "../styles/header.scss";
+import { AnimatePresence } from "framer-motion";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <header className="main-header">
@@ -26,12 +23,20 @@ const Header = () => {
           <button className="header-cta">Get the app</button>
         </div>
       </div>
-      <button onClick={toggleMenu} className="mobile-menu-button">
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="mobile-menu-button"
+      >
         <img src={burger} alt="mobile menu" />
       </button>
-      {isMenuOpen && (
-        <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      )}
+      <AnimatePresence mode="wait">
+        {isMenuOpen && (
+          <MobileMenu
+            isMenuOpen={isMenuOpen}
+            toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
+          />
+        )}
+      </AnimatePresence>
     </header>
   );
 };
