@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  @include medium-padding;
 
   .image-with-text-image {
     width: 100%;

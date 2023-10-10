@@ -1,4 +1,4 @@
 1. Typos in the design are corrected in the implementation
 
-2. The vector in the hero image has position absolute in the design without it being part of the hero-content-container
-but rather in the hero-container. This translates into the vector spanning full width on larger than 1440px screens which the design uses. Is this the implied behaviour?
+2. The vector in the hero image and the background of circles are to be treated as a single image?
+on mobile devices the design points that the iphone vector is smaller. The currently implementation is that the iphone vector is the same size as the background of circles and resizes responsively. I can change this if needed.

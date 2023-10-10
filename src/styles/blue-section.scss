@@ -15,6 +15,10 @@
     .blue-section-text {
       @include body-1;
       color: $white;
+
+      @include xsmall {
+        padding: 2.4rem;
+      }
     }
   }
 }

@@ -8,6 +8,11 @@
   margin: 0 auto;
   padding: 10rem 0;
 
+  @include xsmall {
+    gap: 4.8rem;
+    padding: 4.8rem 2.4rem;
+  }
+
   .heading-container {
     display: flex;
     flex-direction: column;
@@ -18,11 +23,19 @@
     .section-heading {
       @include header-1;
       text-align: center;
+
+      @include xsmall {
+        @include mobile-header-1;
+      }
     }
 
     .section-subheading {
       @include body-2;
       text-align: center;
+
+      @include xsmall {
+        @include mobile-body-2;
+      }
     }
   }
 }

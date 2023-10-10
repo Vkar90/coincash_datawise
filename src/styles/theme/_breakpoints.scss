@@ -9,3 +9,15 @@
     @content;
   }
 }
+
+@mixin xsmall {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin medium-padding {
+  @media (max-width: 1150px) {
+    padding: 0 2.4rem;
+  }
+}

@@ -1,6 +1,7 @@
 @import "./theme/_colors.scss";
 @import "./theme/_typography.scss";
 @import "./theme/_buttons.scss";
+@import "./theme/_breakpoints.scss";
 
 .main-header {
   display: flex;
@@ -9,6 +10,16 @@
   gap: 16.4rem;
   align-self: stretch;
   margin-top: 4.4rem;
+  @include medium-padding;
+
+  @include small {
+    display: flex;
+    padding: 1.6rem 2.4rem;
+    align-items: center;
+    gap: 2.4rem;
+    align-self: stretch;
+    margin-top: 1rem;
+  }
 
   .logo-container {
     display: flex;
@@ -23,12 +34,16 @@
     }
   }
 
-  .menu-container {
+  .menu-container.desktop-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2.4rem;
     flex: 1 0 0;
+
+    @include small {
+      display: none;
+    }
 
     .menu {
       list-style-type: none;
@@ -56,6 +71,19 @@
     }
     .header-cta {
       @include desktop-button-cta;
+    }
+  }
+  .mobile-menu-button {
+    display: none;
+    border: none;
+    background: none;
+
+    img {
+      width: 3.4rem;
+    }
+
+    @include small {
+      display: block;
     }
   }
 }

@@ -1,0 +1,51 @@
+@import "./theme/_colors.scss";
+@import "./theme/_typography.scss";
+@import "./theme/_buttons.scss";
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $light-gradient;
+  padding: 2rem;
+  z-index: 1000;
+
+  .mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    .mobile-menu-item {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: $black;
+      @include mobile-header-2;
+    }
+  }
+
+  .close-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: $primary;
+    position: absolute;
+    top: 3.3rem;
+    right: 1.6rem;
+    cursor: pointer;
+  }
+
+  .mobile-cta {
+    margin-top: 2rem;
+
+    .mobile-header-cta {
+      @include mobile-button-cta;
+      @include mobile-label-1;
+    }
+  }
+}
