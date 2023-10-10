@@ -7,3 +7,9 @@
 4. on textbox components mobile label and text sizes are not given. I have used the mobile equivalents but crosscheck with the design team on this.
 
 5. there is only mobile breakpoint provided in the design. the implementation takes care of other breakpoints (laptop, tablet). discuss with the design team on this.
+
+6. the blue section copy is reduntant "over 200.000+ users" either use over or +
+
+7. scrollbar customization is limited on safari ios devices consult with the design team for workaround
+potential fixes required npm libraries (simplebar, react-custom-scrollbars) or add an extra visual element
+that indicates the presence of a carousel

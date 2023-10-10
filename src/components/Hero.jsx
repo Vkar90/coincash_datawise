@@ -8,11 +8,6 @@ import mobileIphone from "../assets/mobile_hero_image.svg";
 import Header from "./Header";
 
 const Hero = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, duration: 1 },
-    visible: { opacity: 1 },
-  };
-
   // state and variables for color changing text
   const text = "COINCASH";
   const [colors, setColors] = useState(Array(text.length).fill("black"));
@@ -99,14 +94,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-img">
-            <motion.img
-              src={heroImage}
-              alt="coincash feature image"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            />
+            <img src={heroImage} alt="coincash feature image" />
           </div>
         </div>
       </div>
