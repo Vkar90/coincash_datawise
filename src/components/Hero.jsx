@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 
 import "../styles/hero.scss";
 import iphone from "../assets/iphone.svg";
+import mobileIphone from "../assets/mobile_hero_image.svg";
 import Header from "./Header";
 
 const Hero = () => {
-  // state to hold the button text and window width
+  // state to hold the button text, hero image and window width
   const [buttonText, setButtonText] = useState("Download now for free");
+  const [heroImage, setHeroImage] = useState(iphone);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //listen for window resizes and update the windowWidth state
@@ -19,7 +21,8 @@ const Hero = () => {
 
   //update the button text based on the window width
   useEffect(() => {
-    setButtonText(windowWidth <= 500 ? "Get the app" : "Download now for free");
+    setButtonText(windowWidth <= 900 ? "Get the app" : "Download now for free");
+    setHeroImage(windowWidth <= 900 ? mobileIphone : iphone);
   }, [windowWidth]);
 
   return (
@@ -43,7 +46,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-img">
-            <img src={iphone} alt="Describe your image" />
+            <img src={heroImage} alt="Describe your image" />
           </div>
         </div>
       </div>
