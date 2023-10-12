@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useInView } from "react-intersection-observer";
 import "../styles/hero.scss";
 import iphone from "../assets/iphone.svg";
@@ -15,9 +15,7 @@ const Hero = () => {
     threshold: 0,
   });
 
-  // state to hold the button text, hero image and window width
-  const [buttonText, setButtonText] = useState("Download now for free");
-  const [heroImage, setHeroImage] = useState(iphone);
+  // state to hold the  window width
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //listen for window resizes and update the windowWidth state
@@ -28,10 +26,10 @@ const Hero = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  //update the button text based on the window width
-  useEffect(() => {
-    setButtonText(windowWidth <= 900 ? "Get the app" : "Download now for free");
-    setHeroImage(windowWidth <= 900 ? mobileIphone : iphone);
+  const [buttonText, heroImage] = useMemo(() => {
+    return windowWidth <= 900
+      ? ["Get the app", mobileIphone]
+      : ["Download now for free", iphone];
   }, [windowWidth]);
 
   const runEffect = () => {

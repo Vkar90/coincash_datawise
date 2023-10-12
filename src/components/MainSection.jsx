@@ -69,6 +69,7 @@ const MainSection = () => {
         <ImageWithText
           imageFirst={windowWidth <= 900 ? true : true}
           imageSrc={imageLeft}
+          altText="Shop anywhere"
           title="Shop anywhere"
           subtitle="The easiest way to use your
       cryptocurrencies for everyday purchases."
@@ -76,6 +77,7 @@ const MainSection = () => {
         <ImageWithText
           imageFirst={windowWidth <= 900 ? true : false}
           imageSrc={imageRight}
+          altText="Zero fees"
           title="Zero fees"
           subtitle="Enjoy zero fees on all purchases."
         />

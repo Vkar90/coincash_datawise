@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 
 const EmailForm = () => {
   const [email, setEmail] = useState("");
-  const [isDisabled, setIsDisabled] = useState(true);
 
-  useEffect(() => {
+  // Using useMemo to determine the disabled state based on the email value
+  const isDisabled = useMemo(() => {
     // basic email regex, for real case validation use external library
     const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    setIsDisabled(!emailRegex.test(email));
+    return !emailRegex.test(email);
   }, [email]);
 
   // handle form submit with demo console log
