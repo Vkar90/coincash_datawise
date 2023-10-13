@@ -5,11 +5,11 @@ import iphone from "../assets/iphone.svg";
 import mobileIphone from "../assets/mobile_hero_image.svg";
 
 import Header from "./Header";
+import useColorEffect from "../hooks/useColorEffect";
 
 const Hero = () => {
   // state and variables for color changing text
   const text = "COINCASH";
-  const [colors, setColors] = useState(Array(text.length).fill("black"));
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0,
@@ -32,32 +32,7 @@ const Hero = () => {
       : ["Download now for free", iphone];
   }, [windowWidth]);
 
-  const runEffect = () => {
-    const timeouts = [];
-    for (let i = 0; i < text.length; i++) {
-      const timeout = setTimeout(() => {
-        setColors((prevColors) => {
-          // Copy the previous colors array
-          const newColors = [...prevColors];
-          // Set the color of the character at index i to primary
-          newColors[i] = "#0066ff";
-          // Return the updated colors array
-          return newColors;
-        });
-      }, i * 200); // Adjust delay as needed
-      timeouts.push(timeout);
-    }
-    return () => timeouts.forEach(clearTimeout);
-  };
-
-  useEffect(() => {
-    if (inView) {
-      // Reset colors to initial state
-      setColors(Array(text.length).fill("black"));
-      // Run the effect
-      runEffect();
-    }
-  }, [inView]);
+  const colors = useColorEffect(text, inView);
 
   return (
     <section
